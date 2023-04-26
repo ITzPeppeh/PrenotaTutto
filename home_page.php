@@ -7,11 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>CAZZO MOLLE</h1>    
 </body>
 </html>
 
 <?php
-
-
+echo print_r($_POST);
 ?>

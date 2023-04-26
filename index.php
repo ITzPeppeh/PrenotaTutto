@@ -68,7 +68,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="home_page.php" method="POST">
+        <form action="utils.php" method="POST">
             <h1>Login Form</h1>
             <div class="form-group">
                 <label for="">Username</label>
@@ -78,8 +78,9 @@
                 <label for="">Password</label>
                 <input type="password" name="password" class="form-control" required>                
             </div>
-            <input type="submit" class="btn" value="login">
+            <input type="submit" class="btn" name="post_type" value="login">
         </form>
     </div>
 </body>
 </html>
+
