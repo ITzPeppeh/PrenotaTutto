@@ -11,9 +11,9 @@ Si realizzi una versione semplificata di un sito web per gestire un sistema di p
 
 ## _Modello Logico_
 
-attivita (_CodA_, NomeA, MaxPosti, PostiPren)<br />
-utente (_Username_, Passwd, Cognome, Nome)<br />
-prenota (_CodA_, _Username_, Persone)<br />
+attivita (<ins>CodA</ins>, NomeA, MaxPosti, PostiPren)<br />
+utente (<ins>Username</ins>, Passwd, Cognome, Nome)<br />
+prenota (<ins>CodA</ins>, <ins>Username</ins>, Persone)<br />
 
 ## _Vincoli d'integritá_
 
