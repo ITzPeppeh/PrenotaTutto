@@ -11,11 +11,11 @@ Si realizzi una versione semplificata di un sito web per gestire un sistema di p
 
 ## _Modello Logico_
 
-attivita (_CodA_, NomeA, MaxPosti, PostiPren)
-utente (_Username_, Passwd, Cognome, Nome)
-prenota (_CodA_, _Username_, Persone)
+attivita (_CodA_, NomeA, MaxPosti, PostiPren)<br />
+utente (_Username_, Passwd, Cognome, Nome)<br />
+prenota (_CodA_, _Username_, Persone)<br />
 
 ## _Vincoli d'integritá_
 
-prenota(CodA) REFERENCES attivita(CodA)
+prenota(CodA) REFERENCES attivita(CodA)<br />
 prenota(Username) REFERENCES utente(Username)
