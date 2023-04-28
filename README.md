@@ -8,3 +8,14 @@ Si realizzi una versione semplificata di un sito web per gestire un sistema di p
 - Un utente autenticato deve poter visualizzare, anche in momenti successivi, i dati relativi alla propria prenotazione ed eventualmente disdire la propria prenotazione. La prenotazione, quando disdetta, è annullata nella sua interezza.
 - L’autenticazione attraverso username e password deve essere fatta quando richiesta, e rimanere valida se l’utente non ha periodi di inattività superiori a 2 minuti. Se un utente tenta di eseguire un’operazione qualsiasi di quelle che richiedono l’autenticazione dopo che l’inattività è stata superiore a 2 minuti l’operazione non ha effetto e l’utente è costretto a ri-autenticarsi.
 - L’aspetto generale delle pagine web è libero, ma deve essere quanto più possibile gradevole alla vista e prevedere link o voci di menu per poter effettuare le varie operazioni. La visualizzazione, anche semplice, deve essere quanto più possibile uniforme al variare del browser utilizzato.
+
+## _Modello Logico_
+
+attivita (_CodA_, NomeA, MaxPosti, PostiPren)
+utente (_Username_, Passwd, Cognome, Nome)
+prenota (_CodA_, _Username_, Persone)
+
+## _Vincoli d'integritá_
+
+prenota(CodA) REFERENCES attivita(CodA)
+prenota(Username) REFERENCES utente(Username)
