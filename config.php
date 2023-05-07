@@ -1,10 +1,10 @@
 <?php
-$username = "divino";
-$password = "TV991T";
-$hostname = "localhost";
-$namebase = "divinodoni_prenotazioni";
+$userDB = "divino";
+$passDB = "TV991T";
+$hostnameDB = "localhost";
+$namebaseDB = "divinodoni_prenotazioni";
 
-$db = mysqli_connect ($hostname, $username, $password, $namebase);
+$db = mysqli_connect ($hostnameDB, $userDB, $passDB, $namebaseDB);
 
 if (mysqli_connect_errno())
 {
