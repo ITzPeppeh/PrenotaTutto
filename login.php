@@ -4,7 +4,7 @@
     if(isset($_SESSION["iduser"])) {
         header("Location: index.php");
     }
-
+    
     include("config.php");
 
     if(isset($_POST["formconnection"])) {
@@ -32,78 +32,109 @@
     mysqli_close($db);
 ?>
 <html>
-<head>
-    <title><?php echo $titleWebSite; ?> - Login</title>
+    <head>
+        <title><?php echo $titleWebSite; ?> - Login</title>
 
-    
-    <style>
-        body {
-            background-color: #f9f9fa;
-        }
-    </style>
+        
+        <style>
+            * {
+                box-sizing: border-box;
+            }
 
-    <style>
-        /**{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body{
-            min-height: 100vh;
-            display: flex;
-            font-family: sans-serif;
-        }
-        .container{
-            margin: auto;
-            width: 500px;
-            max-width: 90%;
-        }
-        .container form{
-            width: 100%;
-            height: 100%;
-            padding: 20px;
-            background-color: white;
-            border-radius: 4px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, .3);
-        }
-        .container form h1{
-            text-align: center;
-            margin-bottom: 24px;
-            color: #222;
-        }
-        .container form .form-control{
-            width: 100%;
-            height: 40px;
-            background: white;
-            border-radius: 4px;
-            border: 1px solid silver;
-            margin: 10px 0 18px 0;
-            padding: 0;
-        }
-        .container form .btn{
-            margin-left: 50px;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 34px;
-            border: none;
-            outline: none;
-            background-color: #27a327;
-            cursor: pointer;
-            font-size: 16px;
-            text-transform: uppercase;
-            color: white;
-            border-radius: 4px;
-            transition: .3s;
-        }
-        .container form .btn:hover{
-            opacity: .7;
-        }*/
-    </style>
+            body {
+                background-color: #f9f9fa;
+                display: block;
+                height: 100%;
+                margin: 0 22px;
+                font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+                font-size: 14px;
+                line-height: 1.57142857;
+                color: #3c4650;
+            }
 
-</head>
-<body>
-    <div class="container">
+            form {
+                width: 100%;
+                height: 100%;
+                display: table;
+                position: relative;
+                margin-top: 0em;
+            }
+
+            div {
+                display: block;
+            }
+
+            .wrapper {
+                display: table-cell;
+                vertical-align: middle;
+                position: relative;
+            }
+
+            .content-wrapper {
+                width: 400px;
+                margin: 0 auto;
+                text-align: center;
+                padding-bottom: 44px;
+            }
+
+            .content-wrapper .header {
+                margin-top: 44px;
+                margin-bottom: 44px;
+            }
+
+            .conten-wrapper .header .logo {
+                vertical-align: middle;
+            }
+
+            .content-wrapper .content .nav {
+                width: 100%;
+                margin: 22px 0;
+                padding-left: 0;
+                list-style: none;
+            }
+            .content-wrapper .content ul li {
+                font-size: 12px;
+            }
+
+            li a {
+                margin-right: 20px;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 700;
+                border: 1px solid #e8e9ea;
+                position: relative;
+                display: block;
+                padding: 11px;
+                text-decoration: none;
+                border-radius: 4px;
+            }
+
+
+            li.active a {
+                color: #3c4650;
+                background-color: #fff;
+            }
+            
+        </style>
+
+    </head>
+    <body>
         <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
+        <div class="wrapper">
+            <div class="content-wrapper">
+                <div class="header">
+                    <div class="logo">
+                        <?php echo $titleWebSite; ?>
+                    </div>
+                </div>
+                <div class="content">
+                    <ul class="nav">
+                        <li class="active"><a href="login.php" onclick=""> Accedi </a></li>
+                        <li ><a href="register.php" onclick=""> Registrati </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
             <h1>Login Form</h1>
             <div class="form-group">
                 <label for="">Username</label>
@@ -117,11 +148,10 @@
         </form>
         <?php
             if(isset($err)) {
-               echo '<font color="red">'.$err."</font>";
+                echo '<font color="red">'.$err."</font>";
             }
         ?>
-    </div>
-    
-</body>
+        
+    </body>
 </html>
 
