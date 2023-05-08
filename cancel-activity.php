@@ -1,9 +1,9 @@
 <?php 
     session_start();
 
-    /*if(!isset($_SESSION["iduser"])) {
+    if(!isset($_SESSION["iduser"])) {
     header("Location: index.php");
-    }*/ //APPENA LOGIN FATTO SI PUÓ TOGLIERE
+    }
 
     if (!$_GET && !$_POST) {
         header("Location: index.php");
