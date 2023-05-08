@@ -16,6 +16,19 @@
 
     ?>
 
+<html>
+    <head>
+        <title><?php echo $titleWebSite; ?> - My Activity</title>
+    </head>
+    <body>
+        
+    </body>
+    <style>
+        body {
+            background-color: #f9f9fa;
+        }
+    </style>
+</html>
 <?php
     if (isset($_GET["prod"])) {
         $idprod = $_GET["prod"];
