@@ -9,7 +9,7 @@
         header("Location: index.php");
     }
 
-    include("config.php");
+    include("resources/data/config.php");
 
     if($_POST) {
         $codUtente = $_POST["codU"];

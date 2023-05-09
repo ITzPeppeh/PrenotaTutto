@@ -1,7 +1,7 @@
 <?php 
     session_start();
 
-    include("timeout.php");
+    include("resources/data/timeout.php");
     checkSessionTimer();
 
     if(!isset($_SESSION["iduser"])) {
@@ -13,7 +13,7 @@
         header("Location: index.php");
     }
 
-    include("config.php");
+    include("resources/data/config.php");
 
     ?>
 
@@ -35,7 +35,6 @@
                 $tempMaxPosti = $row["MaxPosti"];
                 $tempPostiPren = $row["PostiPren"];
                 $postiDisp = $tempMaxPosti-$tempPostiPren;
-                echo "Attivitá n $tempCodA, titolo $tempNomeA, Posti disponibili $postiDisp";
             }
             
         } else {
@@ -280,7 +279,7 @@
             
             <header class="h-logo container">
                     <a href="index.php">
-                        <img src="img/logo_w.png" width="250" height="55">
+                        <img src="resources/images/logo_w.png" width="250" height="55">
                     </a>
             </header>
 
