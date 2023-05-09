@@ -1,6 +1,9 @@
 <?php 
     session_start();
 
+    include("timeout.php");
+    checkSessionTimer();
+
     if(!isset($_SESSION["iduser"])) {
         header("Location: index.php");
     }

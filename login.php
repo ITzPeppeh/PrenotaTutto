@@ -23,10 +23,21 @@
         
         if (mysqli_num_rows($result)) {
             $_SESSION["iduser"] = $usernameconnect;
+            include("timeout.php");
+            startSessionTimer();
             header("Location: index.php");
         } else {
             $err = "Nome utente o Password non valido!";
         }
+    }
+
+    if (isset($_GET["err_code"])) {
+        switch ($_GET["err_code"]) {
+            case 'no_longer_time':
+                $err = "Tempo di sessione scaduto.";
+                break;
+        }
+        
     }
 
     mysqli_close($db);
@@ -168,7 +179,7 @@
                 background: #fff;
                 vertical-align: middle;
                 border-radius: 4px;
-                color: #1e9be3;
+                color: #3c4650;
             }
 
             .children-box label {
@@ -187,8 +198,8 @@
                 border-radius: 3px;
                 text-transform: uppercase;
                 color: #fff;
-                background-color: #1e9be3;
-                border-color: #1e9be3;
+                background-color: #3c4650;
+                border-color: #3c4650;
                 display: inline-block;
                 margin-bottom: 0;
                 font-weight: 700;

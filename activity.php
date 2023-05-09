@@ -1,6 +1,9 @@
 <?php 
     session_start();
 
+    include("timeout.php");
+    checkSessionTimer();
+
     if(!isset($_SESSION["iduser"])) {
         header("Location: index.php");
     }
@@ -16,6 +19,7 @@
 
     <?php
         if (isset($_GET["prod"])) {
+            checkSessionTimer();
             $idprod = $_GET["prod"];
 
             $sql = "SELECT CodA, NomeA, MaxPosti, PostiPren FROM attivita WHERE CodA='$idprod'";
@@ -41,7 +45,7 @@
 
 <html>
     <head>
-        <title><?php echo $titleWebSite; ?> - Attivit</title>
+        <title><?php echo $titleWebSite; ?> - Attivitá</title>
         <style>
             ::-webkit-scrollbar {
                 width: 10px;
@@ -350,6 +354,7 @@
                         <input type="submit" value="Prenota ora!" class="btn">
                         <?php 
                             if ($_POST) {
+                                checkSessionTimer();
                                 $postidaPren = $_POST["vogliopren"];
 
                                 $sql = "UPDATE attivita

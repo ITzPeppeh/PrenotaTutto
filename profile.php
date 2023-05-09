@@ -1,6 +1,9 @@
 <?php 
     session_start();
 
+    include("timeout.php");
+    checkSessionTimer();
+
     if(!isset($_SESSION["iduser"])) {
         header("Location: index.php");
     }
@@ -233,8 +236,8 @@
                 text-transform: uppercase;
                 border-radius: 3px;
                 color: #fff;
-                background-color: #1e9be3;
-                border-color: #1e9be3;
+                background-color: #3c4650;
+                border-color: #3c4650;
                 display: inline-block;
                 margin-bottom: 0;
                 font-weight: 700;

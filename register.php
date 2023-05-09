@@ -180,7 +180,7 @@
                 background: #fff;
                 vertical-align: middle;
                 border-radius: 4px;
-                color: #1e9be3;
+                color: #3c4650;
             }
 
             .children-box label {
@@ -199,8 +199,8 @@
                 border-radius: 3px;
                 text-transform: uppercase;
                 color: #fff;
-                background-color: #1e9be3;
-                border-color: #1e9be3;
+                background-color: #3c4650;
+                border-color: #3c4650;
                 display: inline-block;
                 margin-bottom: 0;
                 font-weight: 700;
