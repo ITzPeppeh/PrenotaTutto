@@ -12,6 +12,11 @@
     border: 6px solid transparent;
 }
 
+::selection {
+    background-color: #1a1b1f81;
+    color: #fff;
+}
+
 * {
     box-sizing: border-box;
 }

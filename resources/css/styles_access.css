@@ -1,3 +1,22 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+}
+
+::selection {
+    background-color: #1a1b1f81;
+    color: #fff;
+}
+
 * {
     box-sizing: border-box;
 }
