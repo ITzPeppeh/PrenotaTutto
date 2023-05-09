@@ -165,7 +165,8 @@ header.h-navbar .navig li a:hover {
     letter-spacing: 0.03em;
 }
 .responsive-table .table-row {
-    background-color: #ffffff;
+    background-color: #ffffff; 
+    align-items: center;
     box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
 }
 .responsive-table .col-1 {
